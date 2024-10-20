@@ -26,11 +26,7 @@ module.exports = (sequelize, DataTypes) => {
         phone: {
             type: DataTypes.STRING,
             allowNull: false,
-        },
-        address: {
-            type: DataTypes.STRING,
-            allowNull: true,
-        },
+        }
     });
 
     Customer.associate = (models) => {
