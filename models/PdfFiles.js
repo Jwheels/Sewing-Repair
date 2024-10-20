@@ -22,6 +22,8 @@ module.exports = (sequelize, DataTypes) => {
             foreignKey: 'pdfFileId',
             as: 'repairRecords',
         });
+
+        
     };
 
     return PdfFiles;

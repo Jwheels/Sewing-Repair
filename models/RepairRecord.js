@@ -34,6 +34,11 @@ module.exports = (sequelize, DataTypes) => {
             foreignKey: 'sewingMachineId',
             as: 'sewingMachine',
         });
+
+        RepairRecord.belongsTo(models.Customer, {
+            foreignKey: 'customerId',
+            as: 'customer',
+        });
     };
 
     return RepairRecord;
