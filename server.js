@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 
-const sequelize = require('./config/database'); // Adjust the path as needed
+const sequelize = require('./config/database');
 
 // Middleware
 app.use(cors());

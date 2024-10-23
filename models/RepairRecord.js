@@ -7,11 +7,14 @@ module.exports = (sequelize, DataTypes) => {
             defaultValue: DataTypes.UUIDV4,
             primaryKey: true,
         },
+        issue: {
+            type: DataTypes.TEXT
+        },
         date: {
             type: DataTypes.DATE,
             allowNull: false,
         },
-        description: {
+        workDone: {
             type: DataTypes.TEXT,
             allowNull: false,
         },
@@ -19,14 +22,6 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.DECIMAL(10, 2),
             allowNull: false,
         },
-        pdfFileId: {
-            type: DataTypes.UUID,
-            allowNull: true,
-            references: {
-                model: 'PdfFiles', // Name of the table that stores PDF files
-                key: 'id',
-            }
-        }
     });
 
     RepairRecord.associate = (models) => {
